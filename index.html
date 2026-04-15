@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<button onclick="toggleCV()">Toggle CV</button>
-
-<div id="cv">
-  <a href="cv.pdf" target="_blank">View CV</a>
-</div>
 
     <header>
         <h1>Aseel Abdulrahman Alsnaidi</h1>
@@ -70,22 +65,27 @@
     </section>
 
     <section>
-    <h2>Contact</h2>
-    <p>
-        <a href="https://www.linkedin.com/in/aseel-alsnaidi-235108382" target="_blank">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
-        </a>
-    </p>
+    <h2 onclick="toggleContact()" style="cursor:pointer;">
+        Contact (Click)
+    </h2>
+
+    <div id="contact" style="display:none;">
+        <p>
+            <a href="https://www.linkedin.com/in/aseel-alsnaidi-235108382" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+            </a>
+        </p>
+    </div>
 </section>
 <script>
-function toggleCV() {
-  var cv = document.getElementById("cv");
+function toggleContact() {
+    var contact = document.getElementById("contact");
 
-  if (cv.style.display === "none") {
-    cv.style.display = "block";
-  } else {
-    cv.style.display = "none";
-  }
+    if (contact.style.display === "none") {
+        contact.style.display = "block";
+    } else {
+        contact.style.display = "none";
+    }
 }
 </script>
 </body>
