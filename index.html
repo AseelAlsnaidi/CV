@@ -86,10 +86,10 @@
 function toggleContact() {
     var contact = document.getElementById("contact");
 
-    if (contact.style.display) {
-        contact.style.display = null;
+    if (contact.style.maxHeight) {
+        contact.style.maxHeight = null;
     } else {
-        contact.style.display = contact.scrollHeight + "px";
+        contact.style.maxHeight = contact.scrollHeight + "px";
     }
 }
 </script>
