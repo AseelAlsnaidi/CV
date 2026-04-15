@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<button onclick="toggleCV()">Toggle CV</button>
+
+<div id="cv">
+  <a href="cv.pdf" target="_blank">View CV</a>
+</div>
 
     <header>
         <h1>Aseel Abdulrahman Alsnaidi</h1>
@@ -72,6 +77,16 @@
         </a>
     </p>
 </section>
+<script>
+function toggleCV() {
+  var cv = document.getElementById("cv");
 
+  if (cv.style.display === "none") {
+    cv.style.display = "block";
+  } else {
+    cv.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
