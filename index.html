@@ -65,11 +65,11 @@
     </section>
 
     <section>
-    <h2 onclick="toggleContact()" style="cursor:pointer;">
-        Contact (Click)
+    <h2 onclick="toggleContact()" style="cursor:pointer; user-select:none;">
+        Contact (Click Here)
     </h2>
 
-    <div id="contact" style="display:none;">
+    <div id="contact" class="contact-box">
         <p>
             <a href="https://www.linkedin.com/in/aseel-alsnaidi-235108382" target="_blank">
                 <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
@@ -81,10 +81,10 @@
 function toggleContact() {
     var contact = document.getElementById("contact");
 
-    if (contact.style.display === "none") {
-        contact.style.display = "block";
+    if (contact.style.maxHeight) {
+        contact.style.maxHeight = null;
     } else {
-        contact.style.display = "none";
+        contact.style.maxHeight = contact.scrollHeight + "px";
     }
 }
 </script>
